@@ -1,0 +1,40 @@
+{
+    "courses": [
+        {
+            "crons": [
+                "0 10 * * 1",
+                "0 09 * * 2",
+                "0 15 * * 2",
+                "0 11 * * 5",
+                "0 16 * * 5"
+            ],
+            "subject": "RFMCD",
+            "link": "https://meet.google.com/wjm-mmaa-pts"
+        },
+        {
+            "crons": [
+                "0 11 * * 1",
+                "0 10 * * 2",
+                "0 14 * * 5"
+            ],
+            "subject": "CV",
+            "link": "https://meet.google.com/pyt-tdst-tnw"
+        },
+        {
+            "crons": [
+                "0 12 * * 1",
+                "0 11 * * 2",
+                "0 09 * * 4"
+            ],
+            "subject": "ATD",
+            "link": "https://meet.google.com/ngp-efdi-ugg"
+        },
+        {
+            "crons": [
+                "0 16 * * 1"
+            ],
+            "subject": "DA",
+            "link": "https://meet.google.com/cpa-maze-jta"
+        }
+    ]
+}
