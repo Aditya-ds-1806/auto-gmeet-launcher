@@ -11,7 +11,8 @@ const launchBrowserInstance = () => puppeteer.launch({
 });
 
 const launchMeet = async (url, cookies, browserInstance = null) => {
-    constbrowser = browserInstance?.isConnected() ? browserInstance : await launchBrowserInstance();
+    const
+        browser = browserInstance?.isConnected() ? browserInstance : await launchBrowserInstance();
     const ctx = browser.defaultBrowserContext();
     const page = await browser.newPage();
     const joinSelector = '#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div > div.d7iDfe.NONs6c > div > div.Sla0Yd > div > div.XCoPyb > div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt > span > span';
