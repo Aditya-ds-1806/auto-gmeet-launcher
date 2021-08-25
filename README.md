@@ -34,13 +34,13 @@ Modify this file as per your timetable by adding entries to the `courses` array:
     "courses": [
         ...,
         {
-            "subject": "Math", // name of the subject
-            "link": "https://meet.google.com/abc-defg-hij", // Gmeet link for class
+            "subject": "Math",
+            "link": "https://meet.google.com/abc-defg-hij",
             "crons": [
                 "00 11 * * 1",
                 "00 10 * * 2",
                 "00 14 * * 5"
-            ], // array containing cron expressions
+            ],
         },
         ...
     ]
