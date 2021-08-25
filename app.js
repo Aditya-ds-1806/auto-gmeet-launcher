@@ -12,17 +12,19 @@ const launchMeet = async (url, cookies, browserInstance = null) => {
     const browser = browserInstance ?? await launchBrowserInstance();
     const ctx = browser.defaultBrowserContext();
     const page = await browser.newPage();
-
+    const joinSelector = '#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div > div.d7iDfe.NONs6c > div > div.Sla0Yd > div > div.XCoPyb > div.uArJ5e.UQuaGc.Y5sE8d.uyXBBb.xKiqt > span > span';
+    const micSelector = '#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div > div.ZUpb4c > div.oORaUb.NONs6c > div > div.EhAUAc > div.ZB88ed > div > div > div';
+    const cameraSelector = '#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div > div.ZUpb4c > div.oORaUb.NONs6c > div > div.EhAUAc > div.GOH7Zb > div > div';
     console.log(`Opening ${url}`);
 
     await ctx.overridePermissions('https://meet.google.com', ['camera', 'microphone']);
-    await page.setCookie(...cookies);
+    if (browserInstance === null) await page.setCookie(...cookies);
 
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 0 });
-    const media = await page.$$('[data-is-muted]');
-    const [mute, camera] = [media[0], media[2]];
-    const join = (await page.$$('[jsshadow] > span'))[3];
-    await mute.click();
+    const camera = await page.waitForSelector(cameraSelector, { visible: true });
+    const mic = await page.waitForSelector(micSelector, { visible: true });
+    const join = await page.waitForSelector(joinSelector, { visible: true });
+    await mic.click();
     await camera.click();
     await join.click();
 
