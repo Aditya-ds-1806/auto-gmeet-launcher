@@ -32,7 +32,6 @@ Modify this file as per your timetable by adding entries to the `courses` array:
 ```json
 {
     "courses": [
-        ...,
         {
             "subject": "Math",
             "link": "https://meet.google.com/abc-defg-hij",
@@ -41,8 +40,7 @@ Modify this file as per your timetable by adding entries to the `courses` array:
                 "00 10 * * 2",
                 "00 14 * * 5"
             ],
-        },
-        ...
+        }
     ]
 }
 ```
