@@ -51,7 +51,7 @@ Each entry in the `crons` array is a cron expression which indicates when and ho
 
 ### `app.js` - Choosing a browser
 
-As long as you use any [chromium based browser](https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium), this script shoudl work fine. For chrome/firefox, replace `executablePath` with `product: 'chrome'`.
+As long as you use any [chromium based browser](https://en.wikipedia.org/wiki/Chromium_(web_browser)#Browsers_based_on_Chromium), this script should work fine. For chrome/firefox, replace `executablePath` with `product: 'chrome'`.
 
 ```diff
 -   executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
