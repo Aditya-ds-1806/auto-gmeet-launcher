@@ -7,6 +7,7 @@ Automatically launch Google Meet as per timetable.
 ```bash
 git clone https://github.com/Aditya-ds-1806/auto-gmeet-launcher.git
 cd auto-gmeet-launcher
+npm i
 npm i -g pm2
 pm2 start app.js
 ```
