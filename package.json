@@ -1,12 +1,12 @@
 {
   "name": "auto-gmeet-launcher",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Node.js script to automatically launch Google Meet as per timetable",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },
-  "author": "",
+  "author": "Aditya D.S.",
   "license": "ISC",
   "dependencies": {
     "cron": "^1.8.2",
