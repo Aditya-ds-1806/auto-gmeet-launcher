@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer-core');
 const { CronJob } = require('cron');
 const fs = require('fs/promises');
+const say = require('say');
 
 const launchBrowserInstance = () => puppeteer.launch({
     headless: false,
@@ -16,6 +17,7 @@ const launchMeet = async (url, cookies, browserInstance = null) => {
     const micSelector = '#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div > div.ZUpb4c > div.oORaUb.NONs6c > div > div.EhAUAc > div.ZB88ed > div > div > div';
     const cameraSelector = '#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div > div.ZUpb4c > div.oORaUb.NONs6c > div > div.EhAUAc > div.GOH7Zb > div > div';
     console.log(`Opening ${url}`);
+    say.speak('You have a class in 5 minutes');
 
     await ctx.overridePermissions('https://meet.google.com', ['camera', 'microphone']);
     if (browserInstance === null) await page.setCookie(...cookies);
