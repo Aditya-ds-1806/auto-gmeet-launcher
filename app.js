@@ -22,7 +22,7 @@ const launchMeet = async (url, cookies, browserInstance = null) => {
     say.speak('You have a class in 5 minutes');
 
     await ctx.overridePermissions('https://meet.google.com', ['camera', 'microphone']);
-    if (browserInstance === null) await page.setCookie(...cookies);
+    if (!browserInstance?.isConnected()) await page.setCookie(...cookies);
 
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 0 });
     const camera = await page.waitForSelector(cameraSelector, { visible: true, timeout: 0 });
