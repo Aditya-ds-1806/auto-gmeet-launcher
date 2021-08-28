@@ -15,7 +15,8 @@
             "crons": [
                 "55 10 * * 1",
                 "55 09 * * 2",
-                "55 13 * * 5"
+                "55 13 * * 5",
+                "55 14 * * 6"
             ],
             "subject": "CV",
             "link": "https://meet.google.com/pyt-tdst-tnw"
