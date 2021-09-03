@@ -6,7 +6,7 @@
                 "55 08 * * 2",
                 "55 14 * * 2",
                 "55 10 * * 5",
-                "55 15 * * 5"
+                "55 16 * * 5"
             ],
             "subject": "RFMCD",
             "link": "https://meet.google.com/wjm-mmaa-pts"
