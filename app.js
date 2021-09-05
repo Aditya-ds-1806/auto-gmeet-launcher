@@ -19,7 +19,6 @@ const launchMeet = async (url, cookies, browserInstance = null) => {
     const micSelector = '#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div > div.ZUpb4c > div.oORaUb.NONs6c > div > div.EhAUAc > div.ZB88ed > div > div > div';
     const cameraSelector = '#yDmH0d > c-wiz > div > div > div:nth-child(9) > div.crqnQb > div > div > div.vgJExf > div > div > div.ZUpb4c > div.oORaUb.NONs6c > div > div.EhAUAc > div.GOH7Zb > div > div';
     console.log(`Opening ${url}`);
-    say.speak('You have a class in 5 minutes');
 
     await ctx.overridePermissions('https://meet.google.com', ['camera', 'microphone']);
     if (!browserInstance?.isConnected()) await page.setCookie(...cookies);
@@ -44,6 +43,7 @@ const launchMeet = async (url, cookies, browserInstance = null) => {
         crons.forEach((cron) => {
             const job = new CronJob(cron, async () => {
                 browserInstance = await launchMeet(link, cookies, browserInstance);
+                say.speak(`You have a ${subject} in 5 minutes`);
             }, null, true, 'Asia/Kolkata');
             console.log(`${subject} - ${job.nextDates().fromNow()} - ${link}`);
         });
