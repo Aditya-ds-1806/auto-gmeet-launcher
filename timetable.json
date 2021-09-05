@@ -36,6 +36,33 @@
             ],
             "subject": "DA",
             "link": "https://meet.google.com/cpa-maze-jta"
+        },
+        {
+            "crons": [
+                "55 08 * * 1",
+                "55 13 * * 4",
+                "55 09 * * 5",
+                "55 14 * * 5"
+            ],
+            "subject": "ADCC",
+            "link": "https://meet.google.com/mjk-uwws-rxa"
+        },
+        {
+            "crons": [
+                "55 14 * * 3"
+            ],
+            "subject": "ADCC Practice",
+            "link": "https://meet.google.com/moz-nqrf-eky"
+        },
+        {
+            "crons": [
+                "55 13 * * 1",
+                "55 11 * * 2",
+                "55 10 * * 4",
+                "55 15 * * 4"
+            ],
+            "subject": "RP",
+            "link": "https://meet.google.com/unq-aqcc-cvm"
         }
     ]
 }
